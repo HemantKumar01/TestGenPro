@@ -1,0 +1,23 @@
+{
+  "name": "jee-simulation-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemantKumar01/TestGenPro.git"
+  },
+  "author": "HemantKumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HemantKumar01/TestGenPro/issues"
+  },
+  "homepage": "https://github.com/HemantKumar01/TestGenPro#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
