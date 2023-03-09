@@ -430,3 +430,8 @@ label {
   padding: 15px;
   background-color: #fff;
 }
+.timeTaken {
+  color: green;
+  font-family: poppins;
+  font-size: 1.2em;
+}

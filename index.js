@@ -13,6 +13,7 @@ var topics = Object.keys(data);
 var numQuestionsInTopics = {};
 var test = { Maths: [null] };
 var numQues = 25;
+var testFrame = {};
 
 app.get("/", (req, res) => {
   test = { Maths: [null] };
@@ -33,7 +34,31 @@ const serverInstance = app.listen(port, () => {
 const io = new socket.Server(serverInstance);
 
 io.on("connection", (socket) => {
-  console.log("A connection is made using socket.io");
+  console.log("Test Started with " + numQues + " questions...");
+  socket.on("result", (attemptedQues) => {
+    attemptedQues = JSON.parse(attemptedQues); //{quesNum:timeTaken}
+
+    console.log(
+      "Test submitted successfully. You have tried following question numbers",
+      Object.keys(attemptedQues)
+    );
+
+    var done = JSON.parse(fs.readFileSync("./done.json", "utf8"));
+    for (var quesNum of Object.keys(attemptedQues)) {
+      var topic = testFrame["Maths"][quesNum].topic;
+      if (!done[topic]) {
+        done[topic] = {};
+      }
+      done[topic][testFrame["Maths"][quesNum].index] = {
+        timeTaken: (attemptedQues[quesNum] / 60).toFixed(2),
+      };
+    }
+    fs.writeFile("./done.json", JSON.stringify(done), function (err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+  });
 });
 
 function createPaper() {
@@ -51,7 +76,7 @@ function createPaper() {
   //now using the sorted topics to create paper
   numQuesSelected = 0;
   iteration = 1; //starting with first iteration
-
+  console.log(done);
   while (numQuesSelected < numQues) {
     for (var topic of Object.keys(numQuestionsInTopics)) {
       //start selecting from last questions (harder questions)
@@ -62,7 +87,9 @@ function createPaper() {
 
       if (
         done[topic] &&
-        done[topic].includes(numQuestionsInTopics[topic] - iteration)
+        Object.keys(done[topic]).includes(
+          (numQuestionsInTopics[topic] - iteration).toString()
+        )
       ) {
         continue;
       }
@@ -75,12 +102,21 @@ function createPaper() {
 
       test.Maths.push(question);
       numQuesSelected++;
+      if (!testFrame["Maths"]) {
+        testFrame["Maths"] = {};
+      }
+      testFrame["Maths"][numQuesSelected] = {
+        topic: topic,
+        index: numQuestionsInTopics[topic] - iteration,
+        timeTaken: 0,
+      };
       if (numQuesSelected == numQues) {
         break;
       }
     }
     iteration++;
   }
+  console.log(testFrame);
   fs.writeFile("./public/testData.json", JSON.stringify(test), function (err) {
     if (err) {
       console.log(err);

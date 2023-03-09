@@ -139,6 +139,10 @@ function start(obj1, top1) {
       time = parseInt(quesContainer.getAttribute("data-timer"));
       quesContainer.setAttribute("data-timer", (time + 1).toString());
       remainingTime--;
+      if (remainingTime <= 0) {
+        document.querySelector("#submit").click();
+        return;
+      }
       document.querySelector("#remainingTime").innerHTML = `${(
         (remainingTime - (remainingTime % 60)) /
         60
@@ -159,7 +163,7 @@ function start(obj1, top1) {
 
     // keep track of user's answers
     let numCorrect = 0;
-
+    let attemptedQues = {}; //{questionNum: timeTaken}
     var index = [];
 
     for (var x in obj1) {
@@ -173,6 +177,12 @@ function start(obj1, top1) {
       // find selected answer
       const answerContainer = answerContainers[i - 1];
       const time = quesContainers[i - 1].getAttribute("data-timer");
+      //displaying time taken
+      quesContainers[i - 1].innerHTML =
+        `<span class="timeTaken">[${(parseInt(time) / 60).toFixed(
+          2
+        )} min]</span><br>` + quesContainers[i - 1].innerHTML;
+
       const selector = `input:checked`;
       //to filter out unattempted questions(question with no answer and less than 1 min spent)
       if (
@@ -182,11 +192,16 @@ function start(obj1, top1) {
         dc[i - 1].style.display = "none";
         continue;
       }
+      attemptedQues[i] = parseInt(
+        quesContainers[i - 1].getAttribute("data-timer")
+      );
+
+      // (NOT TO INCLUDE ATTEMPTED BUT NOT ANSWERED below)include only answered questions in counting number of answered questions
       if (answerContainer.querySelector(selector)) {
         numAnswersAttempted++;
       }
     }
-
+    socket.emit("result", JSON.stringify(attemptedQues));
     alert(
       `Congratulations, you have attempted ${numAnswersAttempted} questions in ${(
         timeUsed / 60
@@ -251,9 +266,13 @@ function start(obj1, top1) {
     showSlide(currSlide + 1, true);
   }
 
-  function clearResponse() {
+  function clearResponse(n) {
     const answerContainer = quizContainer.querySelectorAll(".answers");
-    var cc = answerContainer[0].querySelectorAll("input");
+    var cc = answerContainer[n].querySelectorAll("input");
+
+    var dc = palette.childNodes;
+    dc[n].classList.remove("a");
+    dc[n].classList.add("na");
     for (var i = 0; i < cc.length; i++) {
       cc[i].checked = false;
     }
@@ -295,7 +314,9 @@ function start(obj1, top1) {
   nextButton.onclick = () => {
     showNextSlide(currentSlide);
   };
-  clearButton.addEventListener("click", clearResponse);
+  clearButton.addEventListener("click", () => {
+    clearResponse(currentSlide);
+  });
 
   markButton.addEventListener("click", markAndNextSlide);
 
