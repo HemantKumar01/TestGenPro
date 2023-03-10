@@ -84,7 +84,7 @@ function createPaper() {
   //now using the sorted topics to create paper
   numQuesSelected = 0;
   iteration = 1; //starting with first iteration
-  console.log(done);
+
   while (numQuesSelected < numQues) {
     for (var topic of Object.keys(numQuestionsInTopics)) {
       //start selecting from last questions (harder questions)

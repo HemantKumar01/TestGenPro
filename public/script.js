@@ -106,10 +106,15 @@ function start(obj1, top1) {
                   ${obj1[qname].o4}
                   </label>`
     );
+    if (!obj1[qname].ans) {
+      obj1[qname].ans = "...";
+    }
     // add this question and its answers to the output
     var x = output.push(
       `<div class="slide">
-                  <div class="question" data-timer= "0"> ${obj1[qname].q} </div>
+                  <div class="question" data-answer="${
+                    obj1[qname].ans
+                  }" data-timer= "0"> ${obj1[qname].q} </div>
                   <div class="answers"> ${answers.join("")} </div>
                   </div>`
     );
@@ -181,7 +186,10 @@ function start(obj1, top1) {
       quesContainers[i - 1].innerHTML =
         `<span class="timeTaken">[${(parseInt(time) / 60).toFixed(
           2
-        )} min]</span><br>` + quesContainers[i - 1].innerHTML;
+        )} min]</span><br>` + quesContainers[i - 1].innerHTML; //adding attempted Time
+      quesContainers[i - 1].innerHTML =
+        quesContainers[i - 1].innerHTML +
+        `<br>[ANS: ${quesContainers[i - 1].getAttribute("data-answer")}]`; //adding answer (if in data)
 
       const selector = `input:checked`;
       //to filter out unattempted questions(question with no answer and less than 1 min spent)

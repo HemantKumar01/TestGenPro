@@ -1,1 +1,60 @@
-{}
+{
+    "Cengage DI": {
+        "181": {
+            "timeTaken": "2.10"
+        }
+    },
+    "Cengage Parabola": {
+        "172": {
+            "timeTaken": "0.98"
+        },
+        "173": {
+            "timeTaken": "5.13"
+        }
+    },
+    "Cengage Monotonicity": {
+        "163": {
+            "timeTaken": "4.32"
+        }
+    },
+    "Cengage Limits": {
+        "126": {
+            "timeTaken": "3.78"
+        }
+    },
+    "Arihant Complex Numbers": {
+        "119": {
+            "timeTaken": "4.83"
+        }
+    },
+    "Cengage DE": {
+        "112": {
+            "timeTaken": "5.82"
+        }
+    },
+    "Cengage AoD": {
+        "95": {
+            "timeTaken": "4.32"
+        }
+    },
+    "Cengage Ellipse": {
+        "90": {
+            "timeTaken": "2.08"
+        }
+    },
+    "Cengage Indefinite": {
+        "47": {
+            "timeTaken": "2.33"
+        }
+    },
+    "Cengage Circles": {
+        "42": {
+            "timeTaken": "1.90"
+        }
+    },
+    "Cengage AOD": {
+        "15": {
+            "timeTaken": "1.65"
+        }
+    }
+}
