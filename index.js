@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
-
+const prompt = require("prompt-sync")({ sigint: true });
+const open = require("open");
 const app = express();
 const port = 3000;
 
@@ -12,7 +13,7 @@ var done = JSON.parse(fs.readFileSync("./done.json", "utf8"));
 var topics = Object.keys(data);
 var numQuestionsInTopics = {};
 var test = { Maths: [null] };
-var numQues = 25;
+var numQues = prompt("Number of Questions:") || 25; //change 2min/ques from script.js
 var testFrame = {};
 
 app.get("/", (req, res) => {
@@ -30,11 +31,18 @@ app.use(
 
 const serverInstance = app.listen(port, () => {
   console.log(`app listening on port ${port}`);
+  open("http://localhost:3000");
 });
 const io = new socket.Server(serverInstance);
 
 io.on("connection", (socket) => {
-  console.log("Test Started with " + numQues + " questions...");
+  console.log(
+    "Test Started with " +
+      numQues +
+      " questions and " +
+      numQues * 2 +
+      " minutes..."
+  );
   socket.on("result", (attemptedQues) => {
     attemptedQues = JSON.parse(attemptedQues); //{quesNum:timeTaken}
 

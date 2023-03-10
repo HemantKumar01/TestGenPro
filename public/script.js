@@ -73,7 +73,7 @@ function start(obj1, top1) {
   previousButton1.style.opacity = "0";
   palette.classList.remove("non_clickable");
   numQues = index.length - 1;
-  totalTime = numQues * 3 * 60;
+  totalTime = numQues * 2 * 60; //2 min per question
   remainingTime = totalTime;
   runTimer();
 
