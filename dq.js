@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
 
 app.use(express.static("public"));
 app.listen(port, () => {
+  console.log(
+    "Test Data Set to older session. Please Manually select answers you have selected previously and submit test"
+  );
   console.log(`app listening on port ${port}`);
   open(`http://localhost:${port}`);
 });
@@ -37,13 +40,13 @@ function createPaper() {
       if (done[topic][index].submissionTime == submissionTime) {
         test.Maths.push(data[topic][index]);
         test.Maths[test.Maths.length - 1].timeTaken =
-          done[topic][index].timeTaken;
+          done[topic][index].timeTaken * 60;
+        test.Maths[test.Maths.length - 1].selectedOption =
+          done[topic][index].selectedOption;
       }
     }
   }
-  console.log(
-    "Test Data Set to older session. Please Manually select answers you have selected previously and submit test"
-  );
+
   fs.writeFile("./public/testData.json", JSON.stringify(test), function (err) {
     if (err) {
       console.log(err);

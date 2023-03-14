@@ -30,6 +30,8 @@ app.use(
 );
 
 const serverInstance = app.listen(port, () => {
+  console.log(testFrame);
+
   console.log(`app listening on port ${port}`);
   open("http://localhost:3000");
 });
@@ -69,8 +71,9 @@ io.on("connection", (socket) => {
         done[topic] = {};
       }
       done[topic][testFrame["Maths"][quesNum].index] = {
-        timeTaken: (attemptedQues[quesNum] / 60).toFixed(2),
+        timeTaken: (attemptedQues[quesNum].timeTaken / 60).toFixed(2),
         submissionTime: Date.now(),
+        selectedOption: attemptedQues[quesNum].selectedOption,
       };
     }
     fs.writeFile("./stats/done.json", JSON.stringify(done), function (err) {
@@ -136,7 +139,6 @@ function createPaper() {
     }
     iteration++;
   }
-  console.log(testFrame);
   fs.writeFile("./public/testData.json", JSON.stringify(test), function (err) {
     if (err) {
       console.log(err);

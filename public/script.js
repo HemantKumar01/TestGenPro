@@ -93,25 +93,33 @@ function start(obj1, top1) {
 
     answers.push(
       `<label>
-                  <input type="radio" name="${qname}" value="A">
+                  <input type="radio" name="${qname}" value="A" ${
+        obj1[qname].selectedOption == "A" ? "checked" : " "
+      }>
                   ${obj1[qname].o1}
                   </label>`
     );
     answers.push(
       `<label>
-                  <input type="radio" name="${qname}" value="B">
+                  <input type="radio" name="${qname}" value="B" ${
+        obj1[qname].selectedOption == "B" ? "checked" : " "
+      }>
                   ${obj1[qname].o2}
                   </label>`
     );
     answers.push(
       `<label>
-                  <input type="radio" name="${qname}" value="C">
+                  <input type="radio" name="${qname}" value="C" ${
+        obj1[qname].selectedOption == "C" ? "checked" : " "
+      }>
                   ${obj1[qname].o3}
                   </label>`
     );
     answers.push(
       `<label>
-                  <input type="radio" name="${qname}" value="D">
+                  <input type="radio" name="${qname}" value="D" ${
+        obj1[qname].selectedOption == "D" ? "checked" : " "
+      }>
                   ${obj1[qname].o4}
                   </label>`
     );
@@ -131,7 +139,13 @@ function start(obj1, top1) {
     );
 
     var node = document.createElement("div");
-    node.classList.add("nv");
+
+    if (!obj1[qname].selectedOption || obj1[qname].selectedOption == "N") {
+      node.classList.add("nv");
+    } else {
+      node.classList.add("a");
+    }
+
     node.classList.add("item");
     node.innerHTML = (i + 1).toString();
     palette.appendChild(node);
@@ -211,9 +225,14 @@ function start(obj1, top1) {
         dc[i - 1].style.display = "none";
         continue;
       }
-      testStats.attemptedQues[i] = parseInt(
-        quesContainers[i - 1].getAttribute("data-timer")
-      );
+      var selectedOption = "N"; //no option is selected
+      if (answerContainer.querySelector(selector)) {
+        selectedOption = answerContainer.querySelector(selector).value; //belongs to {A,B,C,D}
+      }
+      testStats.attemptedQues[i] = {
+        timeTaken: parseInt(quesContainers[i - 1].getAttribute("data-timer")),
+        selectedOption: selectedOption,
+      };
 
       // (NOT TO INCLUDE ATTEMPTED BUT NOT ANSWERED below)include only answered questions in counting number of answered questions
       if (answerContainer.querySelector(selector)) {
@@ -230,14 +249,14 @@ function start(obj1, top1) {
           numAnswersAttempted
         ).toFixed(2)} min/ques`
       );
+      testStats.sessionData = {
+        submissionTime: Date.now(),
+        numAnswered: numAnswersAttempted,
+        timeUsed: (timeUsed / 60).toFixed(2),
+        avgTime: (timeUsed / 60 / numAnswersAttempted).toFixed(2),
+      };
+      socket.emit("result", JSON.stringify(testStats));
     }
-    testStats.sessionData = {
-      submissionTime: Date.now(),
-      numAnswered: numAnswersAttempted,
-      timeUsed: (timeUsed / 60).toFixed(2),
-      avgTime: (timeUsed / 60 / numAnswersAttempted).toFixed(2),
-    };
-    socket.emit("result", JSON.stringify(testStats));
   }
 
   function showSlide(n, value) {
@@ -280,11 +299,10 @@ function start(obj1, top1) {
 
       var qnoContainer = document.getElementById("question-title");
       var dc = palette.childNodes;
+      qnoContainer.innerHTML = "Question no. " + (currentSlide + 1);
       if (dc[currentSlide].classList.contains("nv")) {
-        var dc = palette.childNodes;
         dc[currentSlide].classList.remove("nv");
         dc[currentSlide].classList.add("na");
-        qnoContainer.innerHTML = "Question no. " + (currentSlide + 1);
       }
     }
   }

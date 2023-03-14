@@ -49,7 +49,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "(i) If \\( x=-2-\\sqrt{-3}, \\) find the value of \\( 2 x^{4}+5 x^{3}+7 x^{2}-x+41 \\)\n(ii) If \\( x=\\frac{3+5 i}{2}, \\) find the value of \\( 2 x^{3}+2 x^{2}-7 x+72 . \\) Show that it will \\( b \\)\n\\[\n\\text { unaltered if } x=\\frac{3-5 i}{2}\n\\]\n"
+            "q": "(i) If \\( x=-2-\\sqrt{-3}, \\) find the value of \\( 2 x^{4}+5 x^{3}+7 x^{2}-x+41 \\)\n(ii) If \\( x=\\frac{3+5 i}{2}, \\) find the value of \\( 2 x^{3}+2 x^{2}-7 x+72 . \\) Show that it will \\( be \\)\n\\[\n\\text { unaltered if } x=\\frac{3-5 i}{2}\n\\]\n"
         },
         {
             "ans": "",
@@ -929,7 +929,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "Let \\( \\gamma \\) be the imaginary part of \\( (z-1) e^{-i \\alpha}+(z-1)^{-1} e^{i \\alpha} \\) where \\( z \\) is complex a \\( \\alpha \\) is real, then \\( \\gamma=0 \\) implies that \\( z \\) lies on a circle of centre \\( \\ldots \\ldots \\) and radius.\n"
+            "q": "Let \\( \\gamma \\) be the imaginary part of \\( (z-1) e^{-i \\alpha}+(z-1)^{-1} e^{i \\alpha} \\) where \\( z \\) is complex a \\( \\alpha \\) is real, then \\( \\gamma=0 \\) implies that \\( z \\) lies on a circle of centre \\( \\ldots \\ldots \\) and radius ...\n"
         },
         {
             "ans": "",
@@ -940,12 +940,12 @@
             "q": "If \\( \\omega \\) is an imaginary cube root of unity, then the value of\n\\( \\cos \\left\\{\\left(\\omega^{17}+\\omega^{7}\\right) \\pi+\\frac{\\pi}{3}\\right\\} \\) is \\( \\ldots \\ldots \\ldots \\)"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
-            "q": "If } \\sum_{k=0}^{200} t^{k}+\\prod_{p=1}^{50} P^{p}=x+t y \\text { then }\n\\]\nthe values of \\( x \\) and \\( y \\) are \\( x=m \\) and \\( y=m \\)\n"
+            "ans": "D",
+            "o1": "(0,1)",
+            "o2": "(2,3)",
+            "o3": "(1,0)",
+            "o4": "(1, -1)",
+            "q": "\\(\\text{If } \\sum_{k=0}^{200} i^{k}+\\prod_{p=1}^{50} i^{p}=x+i y \\text { then }\n\\)\nthe values of \\( x \\) and \\( y \\) respectively are\n"
         },
         {
             "ans": "",
@@ -4571,11 +4571,11 @@
             "q": "If \\( f(x)=x+\\int_{0}^{1} t(x+t) f(t) d t, \\) then the value of \\( \\frac{23}{2} f(0) \\) is equal to\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "B",
+            "o1": "1",
+            "o2": "2",
+            "o3": "3",
+            "o4": "4",
             "q": " The value of the definite integral \\( \\int_{\\sqrt{2}-1}^{\\sqrt{2}+1} \\frac{x^{4}+x^{2}+2 }{\\left(x^{2}+1\\right)^{2}} d x \\) equals\n"
         },
         {
@@ -5559,7 +5559,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "Archives Subjective:\nEvaluate \\( \\int \\frac{\\sin x}{\\sin x-\\cos x} d x \\)\n(IIT-JEE, 1978)\n"
+            "q": "(Subjective)\nEvaluate \\( \\int \\frac{\\sin x}{\\sin x-\\cos x} d x \\)\n(IIT-JEE, 1978)\n"
         },
         {
             "ans": "",
@@ -6714,11 +6714,11 @@
             "q": " \\( f(x)=\\frac{3 x^{2}+a x+a+1}{x^{2}+x-2} \\) and \\( \\lim _{x \\rightarrow-2} f(x) \\) exists. Then the value\nof \\( (a-4) \\) is"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "A",
+            "o1": "4",
+            "o2": "\\( \\infty \\)",
+            "o3": "6",
+            "o4": "0",
             "q": "If \\( L=\\lim _{x \\rightarrow \\infty}\\left\\{x-x^{2} \\log _{e}\\left(1+\\frac{1}{x}\\right)\\right\\} \\), then the value of \\( 8 L \\)\n"
         },
         {
@@ -8033,11 +8033,11 @@
             "q": "A rectangle with one side lying along the \\( x \\) -axis is to be inscribed in the closed region of the \\( x y \\) plane bounded by the lines \\( y=0, y=3 x, \\) and \\( y=30-2 x . \\) If \\( M \\) is the largest area of such a rectangle, then the value of \\( \\frac{2 M}{27} \\) is\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "C",
+            "o1": "0",
+            "o2": "3",
+            "o3": "4",
+            "o4": "-1",
             "q": "The least integral value of \\( x \\) where \\( f(x)=\\log _{1 / 2}\\left(x^{2}-2 x-3\\right) \\) is monotonically decreasing is\n"
         },
         {
@@ -9440,11 +9440,11 @@
             "q": "Line \\( y=2 x-b \\) cuts the parabola \\( y=x^{2}-4 x \\) at points \\( A \\) and \\( B . \\) Then the value of \\( b \\) for which \\( \\angle A O B \\) is a right angle is\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "C",
+            "o1": "4",
+            "o2": "3",
+            "o3": "5",
+            "o4": "7",
             "q": "A line through the origin intersects the parabola \\( 5 y= \\) \\( 2 x^{2}-9 x+10 \\) at two points whose \\( x \\) -coordinates add up to \\( 17 . \\) Then the slope of the line is\n"
         },
         {
@@ -10492,12 +10492,12 @@
             "q": "36 \\quad \\) Statement-1: Centre of circle \\( \\frac{| z+1}{| z-1}=2 \\) is \\( \\left(\\frac{5}{3}, 0\\right) \\)\nStatement-2: radius of circle \\( \\frac{|z+1|}{|z-1|}=2 \\) is \\( \\frac{4}{3} \\)\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
-            "q": "37 Statement-1: If \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right| 1, \\) then maximum value of \\( \\left|z_{2}-z_{3}\\right|^{2}+\\left|z_{3}-z_{1}\\right|^{2}+\\left|z_{1}-z_{2}\\right|^{2} \\) is 9\nStatement- 2: If \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right|=1, \\) then is \\( \\left(z_{2} \\bar{z}_{3}+z_{3} \\bar{z}_{1}+z_{1} \\bar{z}_{2}\\right) \\geq-\\frac{3}{2} \\)\n"
+            "ans": "C",
+            "o1": "Both statements are false",
+            "o2": "Both statements are true",
+            "o3": "Only statement 1 is true",
+            "o4": "Only statement 2 is true",
+            "q": "Statement-1: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right| = 1, \\) then maximum value of \\( \\left|z_{2}-z_{3}\\right|^{2}+\\left|z_{3}-z_{1}\\right|^{2}+\\left|z_{1}-z_{2}\\right|^{2} \\) is 9\nStatement- 2: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right|=1, \\) then is \\( \\left(z_{2} \\bar{z}_{3}+z_{3} \\bar{z}_{1}+z_{1} \\bar{z}_{2}\\right) \\geq-\\frac{3}{2} \\)\n"
         },
         {
             "ans": "",
