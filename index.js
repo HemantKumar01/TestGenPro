@@ -8,7 +8,7 @@ const port = 3000;
 const socket = require("socket.io");
 
 var data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
-var done = JSON.parse(fs.readFileSync("./done.json", "utf8"));
+var done = JSON.parse(fs.readFileSync("./stats/done.json", "utf8"));
 
 var topics = Object.keys(data);
 var numQuestionsInTopics = {};
@@ -18,7 +18,7 @@ var testFrame = {};
 
 app.get("/", (req, res) => {
   test = { Maths: [null] };
-  done = JSON.parse(fs.readFileSync("./done.json", "utf8"));
+  done = JSON.parse(fs.readFileSync("./stats/done.json", "utf8"));
   createPaper();
   res.sendFile("index.html", { root: "./public" });
 });
@@ -43,15 +43,26 @@ io.on("connection", (socket) => {
       numQues * 2 +
       " minutes..."
   );
-  socket.on("result", (attemptedQues) => {
-    attemptedQues = JSON.parse(attemptedQues); //{quesNum:timeTaken}
+  socket.on("result", (testStats) => {
+    testStats = JSON.parse(testStats);
+    attemptedQues = testStats.attemptedQues; //{quesNum:timeTaken}
 
     console.log(
       "Test submitted successfully. You have tried following question numbers",
       Object.keys(attemptedQues)
     );
 
-    var done = JSON.parse(fs.readFileSync("./done.json", "utf8"));
+    fs.writeFile(
+      "./stats/sessionData.json",
+      JSON.stringify(testStats.sessionData),
+      function (err) {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+
+    var done = JSON.parse(fs.readFileSync("./stats/done.json", "utf8"));
     for (var quesNum of Object.keys(attemptedQues)) {
       var topic = testFrame["Maths"][quesNum].topic;
       if (!done[topic]) {
@@ -59,9 +70,10 @@ io.on("connection", (socket) => {
       }
       done[topic][testFrame["Maths"][quesNum].index] = {
         timeTaken: (attemptedQues[quesNum] / 60).toFixed(2),
+        submissionTime: Date.now(),
       };
     }
-    fs.writeFile("./done.json", JSON.stringify(done), function (err) {
+    fs.writeFile("./stats/done.json", JSON.stringify(done), function (err) {
       if (err) {
         console.log(err);
       }

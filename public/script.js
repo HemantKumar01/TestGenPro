@@ -1,4 +1,3 @@
-var socket = io();
 var currentSlide = 0;
 
 var quesContainers = null;
@@ -7,6 +6,8 @@ var interval = null;
 var numQues = 0;
 var totalTime = 0;
 var remainingTime = 0;
+var isDq = false;
+var socket;
 
 data = {};
 (async () => {
@@ -14,7 +15,13 @@ data = {};
   loadedJSON = await loadedJSON.json();
   data = JSON.parse(JSON.stringify(loadedJSON));
   console.log(data);
-
+  if (data.Maths[1].timeTaken) {
+    //TODO: change in future to make it better (suppose i have more topics);
+    isDq = true;
+  }
+  if (!isDq) {
+    socket = io();
+  }
   getTopics();
 })();
 
@@ -75,7 +82,9 @@ function start(obj1, top1) {
   numQues = index.length - 1;
   totalTime = numQues * 2 * 60; //2 min per question
   remainingTime = totalTime;
-  runTimer();
+  if (!isDq) {
+    runTimer();
+  }
 
   for (var i = 0; i < index.length - 1; i++) {
     const answers = [];
@@ -114,7 +123,9 @@ function start(obj1, top1) {
       `<div class="slide">
                   <div class="question" data-answer="${
                     obj1[qname].ans
-                  }" data-timer= "0"> ${obj1[qname].q} </div>
+                  }" data-timer= "${obj1[qname].timeTaken}"> ${
+        obj1[qname].q
+      } </div>
                   <div class="answers"> ${answers.join("")} </div>
                   </div>`
     );
@@ -168,7 +179,7 @@ function start(obj1, top1) {
 
     // keep track of user's answers
     let numCorrect = 0;
-    let attemptedQues = {}; //{questionNum: timeTaken}
+    let testStats = { sessionData: {}, attemptedQues: {} }; //{questionNum: timeTaken}
     var index = [];
 
     for (var x in obj1) {
@@ -200,7 +211,7 @@ function start(obj1, top1) {
         dc[i - 1].style.display = "none";
         continue;
       }
-      attemptedQues[i] = parseInt(
+      testStats.attemptedQues[i] = parseInt(
         quesContainers[i - 1].getAttribute("data-timer")
       );
 
@@ -209,16 +220,24 @@ function start(obj1, top1) {
         numAnswersAttempted++;
       }
     }
-    socket.emit("result", JSON.stringify(attemptedQues));
-    alert(
-      `Congratulations, you have attempted ${numAnswersAttempted} questions in ${(
-        timeUsed / 60
-      ).toFixed(2)} minutes. Average Time = ${(
-        timeUsed /
-        60 /
-        numAnswersAttempted
-      ).toFixed(2)} min/ques`
-    );
+    if (!isDQ) {
+      alert(
+        `Congratulations, you have attempted ${numAnswersAttempted} questions in ${(
+          timeUsed / 60
+        ).toFixed(2)} minutes. Average Time = ${(
+          timeUsed /
+          60 /
+          numAnswersAttempted
+        ).toFixed(2)} min/ques`
+      );
+    }
+    testStats.sessionData = {
+      submissionTime: Date.now(),
+      numAnswered: numAnswersAttempted,
+      timeUsed: (timeUsed / 60).toFixed(2),
+      avgTime: (timeUsed / 60 / numAnswersAttempted).toFixed(2),
+    };
+    socket.emit("result", JSON.stringify(testStats));
   }
 
   function showSlide(n, value) {

@@ -1,5 +1,8 @@
 {
     "Cengage DI": {
+        "180": {
+            "timeTaken": "5.92"
+        },
         "181": {
             "timeTaken": "2.10"
         }
@@ -13,41 +16,65 @@
         }
     },
     "Cengage Monotonicity": {
+        "162": {
+            "timeTaken": "2.60"
+        },
         "163": {
             "timeTaken": "4.32"
         }
     },
     "Cengage Limits": {
+        "125": {
+            "timeTaken": "9.05"
+        },
         "126": {
             "timeTaken": "3.78"
         }
     },
     "Arihant Complex Numbers": {
+        "118": {
+            "timeTaken": "1.53"
+        },
         "119": {
             "timeTaken": "4.83"
         }
     },
     "Cengage DE": {
+        "111": {
+            "timeTaken": "5.58"
+        },
         "112": {
             "timeTaken": "5.82"
         }
     },
     "Cengage AoD": {
+        "94": {
+            "timeTaken": "1.30"
+        },
         "95": {
             "timeTaken": "4.32"
         }
     },
     "Cengage Ellipse": {
+        "89": {
+            "timeTaken": "4.55"
+        },
         "90": {
             "timeTaken": "2.08"
         }
     },
     "Cengage Indefinite": {
+        "46": {
+            "timeTaken": "2.88"
+        },
         "47": {
             "timeTaken": "2.33"
         }
     },
     "Cengage Circles": {
+        "41": {
+            "timeTaken": "5.72"
+        },
         "42": {
             "timeTaken": "1.90"
         }
@@ -55,6 +82,21 @@
     "Cengage AOD": {
         "15": {
             "timeTaken": "1.65"
+        }
+    },
+    "Resonance Complex Numbers 1": {
+        "37": {
+            "timeTaken": "6.35"
+        }
+    },
+    "Resonance Complex Numbers 2": {
+        "37": {
+            "timeTaken": "1.83"
+        }
+    },
+    "Cengage Straight Lines": {
+        "104": {
+            "timeTaken": "2.33"
         }
     }
 }
