@@ -10,7 +10,7 @@ var isDq = false;
 var socket;
 
 data = {};
-(async () => {
+async function init() {
   loadedJSON = await fetch("./testData.json");
   loadedJSON = await loadedJSON.json();
   data = JSON.parse(JSON.stringify(loadedJSON));
@@ -23,7 +23,8 @@ data = {};
     socket = io();
   }
   getTopics();
-})();
+}
+window.onload = init;
 
 //initialize
 var a = "cd";
@@ -131,9 +132,9 @@ function start(obj1, top1) {
       `<div class="slide">
                   <div class="question" data-answer="${
                     obj1[qname].ans
-                  }" data-timer= "${obj1[qname].timeTaken}"> ${
-        obj1[qname].q
-      } </div>
+                  }" data-timer= "${
+        obj1[qname].timeTaken ? obj1[qname].timeTaken : 0
+      }"> ${obj1[qname].q} </div>
                   <div class="answers"> ${answers.join("")} </div>
                   </div>`
     );
@@ -141,7 +142,7 @@ function start(obj1, top1) {
     var node = document.createElement("div");
 
     if (!obj1[qname].selectedOption || obj1[qname].selectedOption == "N") {
-      node.classList.add("nv");
+      node.classList.add("na");
     } else {
       node.classList.add("a");
     }
@@ -239,7 +240,7 @@ function start(obj1, top1) {
         numAnswersAttempted++;
       }
     }
-    if (!isDQ) {
+    if (!isDq) {
       alert(
         `Congratulations, you have attempted ${numAnswersAttempted} questions in ${(
           timeUsed / 60
@@ -372,5 +373,8 @@ function start(obj1, top1) {
     pContainers[i].addEventListener("click", function () {
       showSlide(parseInt(this.textContent, 10) - 1, false);
     });
+  }
+  if (isDq) {
+    submitButton.click();
   }
 }

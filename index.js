@@ -17,9 +17,6 @@ var numQues = prompt("Number of Questions:") || 25; //change 2min/ques from scri
 var testFrame = {};
 
 app.get("/", (req, res) => {
-  test = { Maths: [null] };
-  done = JSON.parse(fs.readFileSync("./stats/done.json", "utf8"));
-  createPaper();
   res.sendFile("index.html", { root: "./public" });
 });
 
@@ -30,6 +27,9 @@ app.use(
 );
 
 const serverInstance = app.listen(port, () => {
+  test = { Maths: [null] };
+  done = JSON.parse(fs.readFileSync("./stats/done.json", "utf8"));
+  createPaper();
   console.log(testFrame);
 
   console.log(`app listening on port ${port}`);
@@ -53,10 +53,13 @@ io.on("connection", (socket) => {
       "Test submitted successfully. You have tried following question numbers",
       Object.keys(attemptedQues)
     );
-
+    var sessionData = JSON.parse(
+      fs.readFileSync("./stats/sessionData.json", "utf8")
+    );
+    sessionData["records"].push(testStats.sessionData);
     fs.writeFile(
       "./stats/sessionData.json",
-      JSON.stringify(testStats.sessionData),
+      JSON.stringify(sessionData),
       function (err) {
         if (err) {
           console.log(err);

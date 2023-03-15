@@ -1852,11 +1852,11 @@
             "q": "Let \\( C \\) be a curve defined by \\( y=e^{a+b x^{2}} . \\) The curve \\( C \\) passes through the point \\( P(1,1) \\) and the slope of the tangent at \\( P \\) is \\( (-2) . \\) Then the value of \\( 2 a-3 b \\) is\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "D",
+            "o1": "-3",
+            "o2": "3",
+            "o3": "4",
+            "o4": "5",
             "q": "If the curve \\( C \\) in the \\( x y \\) plane has the equation \\( x^{2}+x y \\) \\( +y^{2}=1, \\) then the fourth power of the greatest distance of\na point on \\( C \\) from the origin is\n"
         },
         {
@@ -3110,11 +3110,11 @@
             "q": "If the independent variable \\( x \\) is changed to \\( y, \\) then the differential equation \\( x \\frac{d^{2} y}{d x^{2}}+\\left(\\frac{d y}{d x}\\right)^{3}-\\frac{d y}{d x}=0 \\) is changed\nto \\( x \\frac{d^{2} x}{d y^{2}}+\\left(\\frac{d x}{d y}\\right)^{2}=k \\) where \\( k \\) equals\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "A",
+            "o1": "1",
+            "o2": "2",
+            "o3": "3",
+            "o4": "4",
             "q": "The curve passing through the point (1,1) satisfies the differential equation \\( \\frac{d y}{d x}+\\frac{\\sqrt{\\left(x^{2}-1\\right)\\left(y^{2}-1\\right)}}{x y}=0 . \\) If the curve passes through the point \\( (\\sqrt{2}, k), \\) then the value of\n\\( [k] \\) is (where [.] represents greatest integer function)\n"
         },
         {
@@ -4870,11 +4870,11 @@
             "q": "Let \\( P \\) be any point on a directrix of an ellipse of eccentricity \\( e, S \\) be the corresponding focus, and \\( C \\) the center of the ellipse. The line \\( P C \\) meets the ellipse at \\( A \\). The angle between \\( P S \\) and tangent at \\( A \\) is \\( \\alpha . \\) Then \\( \\alpha \\) is equal to\n"
         },
         {
-            "ans": "A",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
+            "ans": "B",
+            "o1": "2",
+            "o2": "4",
+            "o3": "8",
+            "o4": "16",
             "q": "If a tangent of slope 2 of the ellipse \\( \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1 \\) is normal to the circle \\( x^{2}+y^{2}+4 x+1=0, \\) then the maximum value of \\( a b \\) is"
         },
         {
@@ -5690,12 +5690,12 @@
             "q": " Evaluate for, \\( m \\in N \\)\n\\( \\int\\left(x^{3 m}+x^{2 n}+x^{m}\\right)\\left(2 x^{2 m}+3 x^{m}+6\\right)^{1 / m} d x, x>0 \\)\n\\( (11 T-J E E, 2002) \\)"
         },
         {
-            "ans": "",
+            "ans": "C",
             "o1": "\\( \\sin x-6 \\tan ^{-1}(\\sin x)+C \\)\n",
             "o2": "\\( \\sin x-2(\\sin x)^{-1}+C \\)\n",
             "o3": "\\( \\sin x-2(\\sin x)^{-1}-6 \\tan ^{-1}(\\sin x)+C \\)\n",
             "o4": "\\( \\sin x-2(\\sin x)^{-1}+5 \\tan ^{-1}(\\sin x)+C \\)\n",
-            "q": "Archives Single Correct:\n\nThe value of the integral \\( \\int \\frac{\\cos ^{3} x+\\cos ^{5} x}{\\sin ^{2} x+\\sin ^{4} x} d x \\) is\n"
+            "q": "The value of the integral \\( \\int \\frac{\\cos ^{3} x+\\cos ^{5} x}{\\sin ^{2} x+\\sin ^{4} x} d x \\) is\n"
         },
         {
             "ans": "",
@@ -10181,12 +10181,12 @@
             "q": "The equation of the bisector of the acute angle between the lines \\( 2 x-y+4=0 \\) and \\( x-2 y=1 \\) is\n"
         },
         {
-            "ans": "B",
+            "ans": "C",
             "o1": "\\( x+y=2 \\)\n",
             "o2": "\\( 8 x+y=9 \\)\n",
             "o3": "\\( 7 x-y=6 \\)\n",
             "o4": "none of these",
-            "q": "I. The equation of the line segment \\( A B \\) is \\( y=x . \\) If \\( A \\) and \\( B \\) lie on the same side of the line mirror \\( 2 x-y=1 \\), then the image of \\( A B \\) has the equation\n"
+            "q": "The equation of the line segment \\( A B \\) is \\( y=x . \\) If \\( A \\) and \\( B \\) lie on the same side of the line mirror \\( 2 x-y=1 \\), then the image of \\( A B \\) has the equation\n"
         },
         {
             "ans": "C",
@@ -10457,7 +10457,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "32 If \\( x, y \\) are real and \\( -3+x^{2} y i, x^{2}+y+4 i \\) are conjugate of each other, then \\( |x|+|y| \\) is equal to \\( 73) \\)\n"
+            "q": "If \\( x, y \\) are real and \\( -3+x^{2} y i, x^{2}+y+4 i \\) are conjugate of each other, then \\( |x|+|y| \\) is equal to \\( 73) \\)\n"
         },
         {
             "ans": "",
@@ -10473,7 +10473,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "34 Statement-1: \\( \\left|\\frac{3 z+i}{2 z+3+4 i}\\right|=1.5 \\) represents a straight line Statement-2: Perpedicular bisector of a segment is a straight line"
+            "q": "Statement-1: \\( \\left|\\frac{3 z+i}{2 z+3+4 i}\\right|=1.5 \\) represents a straight line Statement-2: Perpedicular bisector of a segment is a straight line"
         },
         {
             "ans": "",
@@ -10481,7 +10481,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "35 Statement-1: Minimum of \\( f(\\theta)=\\left|\\frac{2 i}{3-i e^{i \\theta}}\\right| \\) is \\( \\frac{1}{\\sqrt{2}} \\)\nStatement-2: Maximum value of \\( f(\\theta)=\\left|\\frac{2 i}{3-i e^{i}}\\right| \\) is 1"
+            "q": "Statement-1: Minimum of \\( f(\\theta)=\\left|\\frac{2 i}{3-i e^{i \\theta}}\\right| \\) is \\( \\frac{1}{\\sqrt{2}} \\)\nStatement-2: Maximum value of \\( f(\\theta)=\\left|\\frac{2 i}{3-i e^{i}}\\right| \\) is 1"
         },
         {
             "ans": "",
@@ -10489,7 +10489,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "36 \\quad \\) Statement-1: Centre of circle \\( \\frac{| z+1}{| z-1}=2 \\) is \\( \\left(\\frac{5}{3}, 0\\right) \\)\nStatement-2: radius of circle \\( \\frac{|z+1|}{|z-1|}=2 \\) is \\( \\frac{4}{3} \\)\n"
+            "q": "Statement-1: Centre of circle \\( \\frac{| z+1}{| z-1}=2 \\) is \\( \\left(\\frac{5}{3}, 0\\right) \\)\nStatement-2: radius of circle \\( \\frac{|z+1|}{|z-1|}=2 \\) is \\( \\frac{4}{3} \\)\n"
         },
         {
             "ans": "C",
@@ -10497,7 +10497,7 @@
             "o2": "Both statements are true",
             "o3": "Only statement 1 is true",
             "o4": "Only statement 2 is true",
-            "q": "Statement-1: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right| = 1, \\) then maximum value of \\( \\left|z_{2}-z_{3}\\right|^{2}+\\left|z_{3}-z_{1}\\right|^{2}+\\left|z_{1}-z_{2}\\right|^{2} \\) is 9\nStatement- 2: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right|=1, \\) then is \\( \\left(z_{2} \\bar{z}_{3}+z_{3} \\bar{z}_{1}+z_{1} \\bar{z}_{2}\\right) \\geq-\\frac{3}{2} \\)\n"
+            "q": "Statement-1: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right| = 1, \\) then maximum value of \\( \\left|z_{2}-z_{3}\\right|^{2}+\\left|z_{3}-z_{1}\\right|^{2}+\\left|z_{1}-z_{2}\\right|^{2} \\) is 9 <br> Statement- 2: If complex numbers \\( z_{1}, z_{2}, z_{3} \\) are such that \\( \\left|z_{1}\\right|=\\left|z_{2}\\right|=\\left|z_{3}\\right|=1, \\) then is \\( \\left(z_{2} \\bar{z}_{3}+z_{3} \\bar{z}_{1}+z_{1} \\bar{z}_{2}\\right) \\geq-\\frac{3}{2} \\)\n"
         },
         {
             "ans": "",
@@ -10505,7 +10505,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "38 Statement-1: If \\( 6 * 1 \\) is a cube root of unity and \\( z \\) is a complex number such that \\( |z|=1 \\), then\n\\[\n\\left|\\frac{2+3 w+4 z w^{2}}{4 w+3 w^{2} z+2 z}\\right|=1\n\\]\nStatement-2: If \\( z_{1}, z_{2} \\) are two complex numbers then \\( \\left|z_{1}\\right|=\\left|z_{2}\\right| \\Rightarrow z_{1}=\\bar{z}_{2} \\)"
+            "q": "Statement-1: If \\( 6 * 1 \\) is a cube root of unity and \\( z \\) is a complex number such that \\( |z|=1 \\), then\n\\[\n\\left|\\frac{2+3 w+4 z w^{2}}{4 w+3 w^{2} z+2 z}\\right|=1\n\\]\nStatement-2: If \\( z_{1}, z_{2} \\) are two complex numbers then \\( \\left|z_{1}\\right|=\\left|z_{2}\\right| \\Rightarrow z_{1}=\\bar{z}_{2} \\)"
         }
     ],
     "Resonance Complex Numbers 2": [
@@ -10732,7 +10732,7 @@
             "o2": "Statement-1 is True, Statement- 2 is True; Statement- 2 is NOT a correct explanation for Statement- 1\n",
             "o3": "Statement-1 is True, Statement- 2 is False\n",
             "o4": "Statement- 1 is False, Statement- 2 is True\n",
-            "q": "31 Statement-1: lif \\( z_{, 7} z_{, 7}, z_{7} \\) are complex number representing the points \\( A, B, C \\) such that \\( \\frac{2}{z_{1}}=\\frac{1}{z_{2}}+\\frac{1}{z_{3}} \\)\nThen circle through \\( A, B, C \\) passes through origin. Statement \\( -2: \\) if \\( 2 z_{z}=z_{1}+z_{3} \\) then \\( z_{,} z, z_{3} \\) are collinear.\n"
+            "q": "Statement-1: lif \\( z_{, 7} z_{, 7}, z_{7} \\) are complex number representing the points \\( A, B, C \\) such that \\( \\frac{2}{z_{1}}=\\frac{1}{z_{2}}+\\frac{1}{z_{3}} \\)\nThen circle through \\( A, B, C \\) passes through origin. Statement \\( -2: \\) if \\( 2 z_{z}=z_{1}+z_{3} \\) then \\( z_{,} z, z_{3} \\) are collinear.\n"
         },
         {
             "ans": "",
@@ -10740,7 +10740,7 @@
             "o2": "Statement-1 is True, Statement- 2 is True; Statement- 2 is NOT a correct explanation for Statement-\n",
             "o3": "Statement-1 is True, Statement- 2 is False\n",
             "o4": "Statement- 1 is False, Statement- 2 is True\n",
-            "q": "32 Statement -1 \\( : 3+\\mathrm{i} x^{2} y \\) and \\( x^{2}+y+4 \\) i are complex conjugate numbers, then \\( x^{2}+y^{2}=4 \\) Statement-2: It sum and product of two complex numbers is real then they are conjugate complex number.\n"
+            "q": "Statement -1 \\( : 3+\\mathrm{i} x^{2} y \\) and \\( x^{2}+y+4 \\) i are complex conjugate numbers, then \\( x^{2}+y^{2}=4 \\) Statement-2: It sum and product of two complex numbers is real then they are conjugate complex number.\n"
         },
         {
             "ans": "",
@@ -10748,7 +10748,7 @@
             "o2": "Statement-1 is True, Statement-2 is True; Statement-2 is NOT a correct explanation for Statement-1\n",
             "o3": "Statement- 1 is True, Statement- 2 is False\n",
             "o4": "Statement- 1 is False, Statement- 2 is True",
-            "q": "33 Statement- 1: 1 If \\( |z|< \\sqrt{2}-1, \\) then \\( | z^{2}+2 z \\) cosal \\( < 1 \\) Statement \\( -2:\\left|z_{1}+z_{2}\\right| \\leq\\left|z_{1}\\right|+\\left|z_{2}\\right| \\) also \\( |\\cos \\alpha| \\leq 1 \\)\n"
+            "q": "Statement- 1: 1 If \\( |z|< \\sqrt{2}-1, \\) then \\( | z^{2}+2 z \\) cosal \\( < 1 \\) Statement \\( -2:\\left|z_{1}+z_{2}\\right| \\leq\\left|z_{1}\\right|+\\left|z_{2}\\right| \\) also \\( |\\cos \\alpha| \\leq 1 \\)\n"
         },
         {
             "ans": "",
@@ -10799,12 +10799,12 @@
             "q": "48 If \\( z_{1} z_{2} \\in C, z_{1}^{2}+z_{2}^{2} \\in A, z_{1}\\left(z_{1}^{2}-3 z_{2}^{2}\\right)=2 \\) and \\( z_{2}\\left(3 z_{1}^{2}-z_{2}^{2}\\right)=11, \\) then find the value of \\( z_{1}^{2}+z_{2}^{2} \\)\n"
         },
         {
-            "ans": "",
-            "o1": "a",
-            "o2": "a",
-            "o3": "a",
-            "o4": "a",
-            "q": "49 If \\( z \\) is a complex number and the minimum value of \\( |z|+|z-1|+|z z-3| \\) is \\( \\lambda \\) and if \\( y=2|x|+3=3(x-\\lambda) \\) then find the value of \\( [x+y] \\) (where [.] denotes the greatest integer function\n"
+            "ans": "C",
+            "o1": "10",
+            "o2": "20",
+            "o3": "30",
+            "o4": "40",
+            "q": " If \\( z \\) is a complex number and the minimum value of \\( |z|+|z-1|+|2z-3| \\) is \\( \\lambda \\) and if \\( y=2|x|+3=3(x-\\lambda) \\) then find the value of \\( [x+y] \\) (where [.] denotes the greatest integer function)\n"
         },
         {
             "ans": "",
@@ -10812,7 +10812,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "50 if \\( \\alpha=e^{\\frac{2 \\pi i}{7}} \\) and \\( f(x)=A_{0}+\\sum_{k=1}^{20} A_{k} x^{k}, \\) then the value of \\( \\sum_{r=0}^{6} f\\left(\\alpha^{\\prime} x\\right)=n\\left(A_{0}+A_{n} x^{n}+A_{2 n} x^{2 n}\\right) \\) then find the value\n\\[\n\\text { of } \\mathrm{n}\n\\]"
+            "q": "if \\( \\alpha=e^{\\frac{2 \\pi i}{7}} \\) and \\( f(x)=A_{0}+\\sum_{k=1}^{20} A_{k} x^{k}, \\) then the value of \\( \\sum_{r=0}^{6} f\\left(\\alpha^{\\prime} x\\right)=n\\left(A_{0}+A_{n} x^{n}+A_{2 n} x^{2 n}\\right) \\) then find the value\n\\[\n\\text { of } \\mathrm{n}\n\\]"
         }
     ]
 }
