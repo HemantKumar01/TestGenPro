@@ -140,15 +140,22 @@ function start(obj1, top1) {
     );
 
     var node = document.createElement("div");
-
-    if (!obj1[qname].selectedOption || obj1[qname].selectedOption == "N") {
-      node.classList.add("na");
+    if (isDq) {
+      if (!obj1[qname].selectedOption || obj1[qname].selectedOption == "N") {
+        node.classList.add("na");
+      } else {
+        node.classList.add("a");
+      }
     } else {
-      node.classList.add("a");
+      node.classList.add("nv");
     }
 
     node.classList.add("item");
-    node.innerHTML = (i + 1).toString();
+    if (obj1[qname].quesNo) {
+      node.innerHTML = obj1[qname].quesNo.toString();
+    } else {
+      node.innerHTML = (i + 1).toString();
+    }
     palette.appendChild(node);
   }
   const quizContainer = document.getElementById("quiz");

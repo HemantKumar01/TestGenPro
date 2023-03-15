@@ -120,6 +120,10 @@ header {
   height: calc(100vh - 264px);
 }
 .question-title {
+position: sticky;
+    top: 0;
+z-index:999;
+    background: white;
   border-bottom: 1px solid #dbdbdb;
   font-weight: bold;
   padding: 7px;

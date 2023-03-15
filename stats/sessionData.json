@@ -1,7 +1,7 @@
 {
     "records": [
         {
-            "submissionTime": 1678807415241,
+            "submissionTime": 1678807415249,
             "numAnswered": 1,
             "timeUsed": "3.70",
             "avgTime": "3.70"
@@ -13,10 +13,16 @@
             "avgTime": "3.62"
         },
         {
-            "submissionTime": 1678808341375,
+            "submissionTime": 1678808341377,
             "numAnswered": 1,
             "timeUsed": "0.70",
             "avgTime": "0.70"
+        },
+        {
+            "submissionTime": 1678885325926,
+            "numAnswered": 6,
+            "timeUsed": "30.00",
+            "avgTime": "5.00"
         }
     ]
 }

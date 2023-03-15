@@ -953,7 +953,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "Let \\( \\gamma \\) be the imaginary part of \\( (z-1) e^{-i a}+(z-1)^{-1} e^{j \\alpha} \\) where \\( z \\) is complex a \\( \\alpha \\) is real, then \\( \\gamma=0 \\) implies that \\( z \\) lies on a circle of centre \\( \\ldots \\) and radius.\n"
+            "q": "Let \\( \\gamma \\) be the imaginary part of \\( (z-1) e^{-i a}+(z-1)^{-1} e^{j \\alpha} \\) where \\( z \\) is complex a \\( \\alpha \\) is real, then \\( \\gamma=0 \\) implies that \\( z \\) lies on a circle of centre \\( \\ldots \\) and radius...\n"
         },
         {
             "ans": "",
@@ -10489,7 +10489,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "Statement-1: Centre of circle \\( \\frac{| z+1}{| z-1}=2 \\) is \\( \\left(\\frac{5}{3}, 0\\right) \\)\nStatement-2: radius of circle \\( \\frac{|z+1|}{|z-1|}=2 \\) is \\( \\frac{4}{3} \\)\n"
+            "q": "Statement-1: Centre of circle \\( \\frac{| z+1 |}{| z-1 |}=2 \\) is \\( \\left(\\frac{5}{3}, 0\\right) \\)\nStatement-2: radius of circle \\( \\frac{|z+1|}{|z-1|}=2 \\) is \\( \\frac{4}{3} \\)\n"
         },
         {
             "ans": "C",
@@ -10796,7 +10796,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "48 If \\( z_{1} z_{2} \\in C, z_{1}^{2}+z_{2}^{2} \\in A, z_{1}\\left(z_{1}^{2}-3 z_{2}^{2}\\right)=2 \\) and \\( z_{2}\\left(3 z_{1}^{2}-z_{2}^{2}\\right)=11, \\) then find the value of \\( z_{1}^{2}+z_{2}^{2} \\)\n"
+            "q": "48 If \\( z_{1} z_{2} \\in C, z_{1}^{2}+z_{2}^{2} \\in R, z_{1}\\left(z_{1}^{2}-3 z_{2}^{2}\\right)=2 \\) and \\( z_{2}\\left(3 z_{1}^{2}-z_{2}^{2}\\right)=11, \\) then find the value of \\( z_{1}^{2}+z_{2}^{2} \\)\n"
         },
         {
             "ans": "C",

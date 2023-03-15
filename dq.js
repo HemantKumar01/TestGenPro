@@ -43,6 +43,8 @@ function createPaper() {
           done[topic][index].timeTaken * 60;
         test.Maths[test.Maths.length - 1].selectedOption =
           done[topic][index].selectedOption;
+
+        test.Maths[test.Maths.length - 1].quesNum = done[topic][index].quesNum;
       }
     }
   }

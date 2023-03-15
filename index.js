@@ -75,8 +75,9 @@ io.on("connection", (socket) => {
       }
       done[topic][testFrame["Maths"][quesNum].index] = {
         timeTaken: (attemptedQues[quesNum].timeTaken / 60).toFixed(2),
-        submissionTime: Date.now(),
+        submissionTime: testStats.sessionData.submissionTime,
         selectedOption: attemptedQues[quesNum].selectedOption,
+        quesNum: quesNum,
       };
     }
     fs.writeFile("./stats/done.json", JSON.stringify(done), function (err) {
