@@ -21,9 +21,7 @@ app.get("/", (req, res) => {
 
 app.use(express.static("public"));
 app.listen(port, () => {
-  console.log(
-    "Test Data Set to older session. Please Manually select answers you have selected previously and submit test"
-  );
+  console.log("Test Data Set to older session");
   console.log(`app listening on port ${port}`);
   open(`http://localhost:${port}`);
 });

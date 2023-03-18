@@ -58,6 +58,7 @@ async function loadTopic(top) {
   tabElement = document.querySelector("[data-topic='" + top + "']");
   tabElement.className = "section_selected";
   obj = data[top];
+  currentSlide = 0;
   start(obj, top);
 }
 
