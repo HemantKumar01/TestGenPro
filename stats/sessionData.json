@@ -11,6 +11,12 @@
             "numAnswered": 6,
             "timeUsed": "30.00",
             "avgTime": "5.00"
+        },
+        {
+            "submissionTime": 1679319689382,
+            "numAnswered": 7,
+            "timeUsed": "29.85",
+            "avgTime": "4.26"
         }
     ]
 }

@@ -8014,7 +8014,7 @@
             "o2": "a",
             "o3": "a",
             "o4": "a",
-            "q": "Let \\( f(x)=\\left\\{\\begin{array}{l}x^{3 / 5}, \\text { if } x \\leq 1 \\\\ -(x-2)^{3}, \\text { if } x>1\\end{array} . \\) Then the number of critical \\right. points on the graph of the function is\n"
+            "q": "Let \\( f(x)=\\left\\{\\begin{array}{l}x^{3 / 5}, \\text { if } x \\leq 1 \\\\ -(x-2)^{3}, \\text { if } x>1\\end{array}\\right\\} . \\) Then the number of critical \\right. points on the graph of the function is\n"
         },
         {
             "ans": "",
